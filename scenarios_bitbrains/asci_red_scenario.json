@@ -1,0 +1,13 @@
+{
+    "name": "simple",
+    "topologies": [{
+        "pathToFile": "topologies/asci_red.json"
+    }],
+    "workloads": [{
+        "pathToFile": "traces/bitbrains-small",
+        "type": "ComputeWorkload"
+    }],
+    "allocationPolicies": [{
+        "policyType": "Mem"
+    }]
+}

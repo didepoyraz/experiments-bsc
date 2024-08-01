@@ -1,0 +1,46 @@
+{
+  "clusters": [
+    {
+      "name": "Roadrunner",
+      "count": 270,
+      "hosts": [
+        {
+          "count": 4,
+            "cpu": 
+              {
+                "count": 12,
+                "coreCount": 9,
+                "coreSpeed": 3200
+            },
+            "memory": {
+              "memorySize": 512000000000
+            },
+      
+          "powerModel": {
+              "modelType": "linear",
+              "idlePower": 60.0,
+              "maxPower": 90.0 
+          }
+        },
+        {
+        "count": 4,
+        "cpu": 
+            {
+              "count": 6,
+              "coreCount": 2,
+              "coreSpeed": 1800
+            },
+            "memory": {
+              "memorySize": 512000000000
+            },
+      
+          "powerModel": {
+              "modelType": "linear",
+              "idlePower": 66.0,
+              "maxPower": 95.0 
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "clusters": [
+      {
+        "name": "CDC 6600",
+        "count": 1, 
+        "hosts": [
+          {
+            "count": 1, 
+            "cpu": 
+              {
+                "coreCount": 1,
+                "coreSpeed": 10
+              }
+            ,
+            "memory": {
+              "memorySize": 512000000000 
+            }
+          }
+        ]
+      }
+    ]
+  } 

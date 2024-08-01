@@ -1,0 +1,24 @@
+{
+  "clusters": [
+    {
+      "name": "Earth Simulator",
+      "count": 1, 
+      "hosts": [
+        {
+          "count": 640, 
+          "cpu": 
+            {
+              "count": 8,
+              "coreCount": 1,
+              "coreSpeed": 1000
+            }
+          ,
+          "memory": {
+            "memorySize": 512000000000 
+          
+          }
+        }
+      ]
+    }
+  ]
+} 

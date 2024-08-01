@@ -1,0 +1,28 @@
+{
+    "clusters": [
+      {
+        "name": "Frontier",
+        "count": 74, 
+        "hosts": [
+          {
+            "count": 128, 
+            "cpu": 
+              {
+                "coreCount": 64,
+                "coreSpeed": 2000
+              }
+            ,
+            "memory": {
+              "memorySize": 512000000000 
+            },
+       
+          "powerModel": {
+              "modelType": "linear",
+              "idlePower": 168.0,
+              "maxPower": 240.0
+          }
+          }
+        ]
+      }
+    ]
+  } 

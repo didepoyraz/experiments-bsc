@@ -1,0 +1,29 @@
+{
+  "clusters": [
+    {
+      "name": "Summit",
+      "count": 256, 
+      "hosts": [
+        {
+          "count": 18, 
+          "cpu": 
+            {
+              "count": 2,
+              "coreCount": 22,
+              "coreSpeed": 3070
+            }
+          ,
+          "memory": {
+            "memorySize": 512000000000 
+          },
+     
+        "powerModel": {
+            "modelType": "linear",
+            "idlePower": 133.0,
+            "maxPower": 190.0
+        }
+        }
+      ]
+    }
+  ]
+} 

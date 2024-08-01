@@ -1,0 +1,14 @@
+{
+    "name": "simple",
+    "topologies": [{
+        "pathToFile": "topologies/summit.json"
+    }],
+    "workloads": [{
+        "pathToFile": "traces/bitbrains-small",
+        "type": "ComputeWorkload"
+    }],
+    "allocationPolicies": [{
+        "policyType": "Mem"
+    }]
+}
+

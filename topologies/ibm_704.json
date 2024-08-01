@@ -1,0 +1,22 @@
+{
+    "clusters": [
+      {
+        "name": "IBM-704",
+        "count": 1, 
+        "hosts": [
+          {
+            "count": 1, 
+            "cpu": 
+              {
+                "coreCount": 1,
+                "coreSpeed": 0.1
+              }
+            ,
+            "memory": {
+              "memorySize": 512000000000 
+            }
+          }
+        ]
+      }
+    ]
+  } 

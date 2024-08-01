@@ -1,0 +1,13 @@
+{
+    "name": "simple",
+    "topologies": [{
+        "pathToFile": "topologies/cray_2.json"
+    }],
+    "workloads": [{
+        "pathToFile": "traces/surfsara_trace",
+        "type": "ComputeWorkload"
+    }],
+    "allocationPolicies": [{
+        "policyType": "Mem"
+    }]
+}

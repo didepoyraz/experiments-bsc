@@ -1,0 +1,35 @@
+#!/bin/sh
+
+BASE_DIR="/Users/didepoyraz/Desktop/Honours-Research-Project/experiments-bsc"
+
+chmod +x "$BASE_DIR/bitbrains_workload_scaling.py"
+chmod +x "$BASE_DIR/filter_and_save.py"
+
+cd /Users/didepoyraz/Desktop/Honours-Research-Project/experiments-bsc
+
+
+echo "Running Python scripts..."
+
+declare -a scenario_topology_paths=(
+    "scenarios_bitbrains/frontier_scenario.json:Frontier:2000:64:2021"
+    "scenarios_bitbrains/summit_scenario.json:Summit:3070:44:2018"
+    "scenarios_bitbrains/tianhe_scenario.json:Tianhe:2200:16:2013"
+    "scenarios_bitbrains/roadrunner_scenario.json:RoadRunner:3200:9:2008"
+    "scenarios_bitbrains/earth_simulator_scenario.json:Earth_Simulator:1000:8:2002"
+    "scenarios_bitbrains/asci_red_scenario.json:Asci_Red:200:2:1997"
+    "scenarios_bitbrains/cm-5_scenario.json:CM-5/1024:32:1:1993"
+)
+
+for entry in "${scenario_topology_paths[@]}"; do
+    IFS=":" read -r scenario system_name cpu_speed_mhz cpu_count year <<< "$entry"
+    
+    echo "\nStarting scaling of: $system_name"
+    ./bitbrains_workload_scaling.py $cpu_speed_mhz $cpu_count
+
+    echo "Now running openDC"
+    ./bin/greenifier --scenario-path $scenario
+
+    echo "For $system_name:"
+    ./filter_and_save.py "$system_name" "$year" "modeling_results_bitbrains.csv" "energy_consumption_bitbrains.csv"
+
+done

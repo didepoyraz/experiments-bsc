@@ -1,0 +1,23 @@
+{
+  "clusters": [
+      {
+          "count": 1,
+          "hosts": [
+              {
+                  "count": 1024,
+                  "cpu": 
+                      {
+                          "coreCount": 1,
+                          "coreSpeed": 32,
+                          "count": 1
+                      }
+                  ,
+                  "memory": {
+                      "memorySize": 512000000000
+                  }
+              }
+          ]
+      }
+  ]
+}
+

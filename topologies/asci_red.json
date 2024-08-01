@@ -1,0 +1,24 @@
+{
+    "clusters": [
+      {
+        "name": "Asci Red",
+        "count": 1, 
+        "hosts": [
+          {
+            "count": 4536, 
+            "cpu": 
+              {
+	            "count": 2,
+                "coreCount": 1,
+                "coreSpeed": 200 
+              }
+            ,
+            "memory": {
+              "memorySize": 512000000000
+            
+            }
+          }
+        ]
+      }
+    ]
+  }

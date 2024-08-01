@@ -1,0 +1,29 @@
+{
+  "clusters": [
+    {
+      "name": "Tianhe",
+      "count": 139, 
+      "hosts": [
+        {
+          "count": 128, 
+          "cpu": 
+            {
+              "count": 1,
+              "coreCount": 24,
+              "coreSpeed": 2200
+            }
+          ,
+          "memory": {
+            "memorySize": 512000000000 
+          },
+     
+        "powerModel": {
+            "modelType": "linear",
+            "idlePower": 80.5,
+            "maxPower": 115.0
+        }
+        }
+      ]
+    }
+  ]
+}

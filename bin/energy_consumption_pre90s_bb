@@ -1,0 +1,33 @@
+#!/bin/sh
+
+BASE_DIR="/Users/didepoyraz/Desktop/Honours-Research-Project/experiments-bsc"
+
+chmod +x "$BASE_DIR/bitbrains_workload_scaling.py"
+chmod +x "$BASE_DIR/filter_and_save.py"
+
+cd /Users/didepoyraz/Desktop/Honours-Research-Project/experiments-bsc
+
+
+echo "Running Python scripts..."
+
+declare -a scenario_path_pre90_bb=(
+    "scenarios_pre90_bb/cray_2_scenario.json:Cray-2:244:4:1985"
+    "scenarios_pre90_bb/cray_1_scenario.json:Cray-1:80:1:1975"
+    "scenarios_pre90_bb/cdc_6600_scenario.json:CDC-6600:10:1:1964"
+    "scenarios_pre90_bb/ibm_704_scenario.json:IBM-704:0.1:1:1954"
+)
+
+for entry in "${scenario_path_pre90_bb[@]}"; do
+    IFS=":" read -r scenario system_name cpu_speed_mhz cpu_count year <<< "$entry"
+    
+    echo "\nStarting scaling of: $system_name"
+    ./bitbrains_workload_scaling.py $cpu_speed_mhz $cpu_count
+
+    echo "Now running openDC"
+    # bin/greenifier --scenario-path $scenario
+    ./bin/greenifier --scenario-path $scenario
+
+    echo "For $system_name:"
+    ./filter_and_save.py "$system_name" "$year" "modeling_results_bitbrains.csv"  "energy_consumption_bitbrains.csv"
+
+done

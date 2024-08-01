@@ -1,0 +1,22 @@
+{
+    "clusters": [
+      {
+        "name": "Cray-1",
+        "count": 1, 
+        "hosts": [
+          {
+            "count": 1, 
+            "cpu": 
+              {
+                "coreCount": 1,
+                "coreSpeed": 80
+              }
+            ,
+            "memory": {
+              "memorySize": 512000000000 
+            }
+          }
+        ]
+      }
+    ]
+  } 
